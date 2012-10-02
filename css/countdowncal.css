@@ -1,0 +1,58 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+.day {
+  margin-left: 0;
+  border: 1px solid grey;
+  border-collapse: collapse;
+  position: relative;
+  text-align: center;
+  width: 135px;
+  height: 135px;
+  float: left;
+}
+
+.day span {
+  font-size: 30px; 
+  line-height: 40px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.day {
+  font-size: 80px; 
+  line-height: 140px;
+}
+
+.special {
+  font-weight: bold;
+  font-size: 90px; 
+}
+
+.month:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 30px;
+}
