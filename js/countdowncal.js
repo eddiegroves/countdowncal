@@ -18,6 +18,7 @@ from = moment('16 April 2012');
       var month = date.month();
       content.push(formatMonth(date));
       content.push('<div class="month">');
+      content.push(previousMonthsDays(date));
 
       while (month == date.month() && date < to) {
         content.push(day({
@@ -39,6 +40,18 @@ from = moment('16 April 2012');
 
   function formatMonth(date) {
     return '<h2>' + date.format('MMMM') + '</h2>';
+  }
+
+  function previousMonthsDays(date) {
+    var dayOfTheWeek = date.day(); // get date of the week from date
+    var spaces = dayOfTheWeek - 1; // assuming first day of the week is sunday
+    if (spaces === -1) spaces = 6;
+    var spaceContent = []; 
+    for (var i = 0; i < spaces; i += 1) {
+      spaceContent.push('<div class="space"></div>');
+    }
+
+    return spaceContent.join('');
   }
 
 })();
